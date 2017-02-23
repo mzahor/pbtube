@@ -1,0 +1,19 @@
+<div class="video-player"
+    ng-switch="$ctrl.video.source">
+
+    <youtube-video 
+        ng-switch-when="youtube" 
+        video-id="$ctrl.video.videoId">
+    </youtube-video>
+
+    <div class="fb-video"
+        ng-switch-when="facebook" 
+        data-href="{{ $ctrl.getFacebookUrl() }}"
+        data-allowfullscreen="true">
+    </div>
+
+    <html5-video
+        ng-switch-when="url" 
+        src="$ctrl.video.url">
+    </html5-video>
+</div>

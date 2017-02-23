@@ -1,9 +1,13 @@
 import template from './app.html';
 import './app.scss';
 
-let appComponent = {
+const appComponent = {
   template,
   restrict: 'E'
 };
 
-export default appComponent;
+export default {
+  register(ngModule) {
+    ngModule.component('app', appComponent);
+  }
+};

@@ -1,6 +1,6 @@
-export default class VideoFeedService {
+export class VideoFeedService {
     constructor($http) {
-        "ngInject";
+        'ngInject';
         this.$http = $http;
     }
 
@@ -8,7 +8,12 @@ export default class VideoFeedService {
         return this.$http.get('https://cdn.playbuzz.com/content/feed/items')
             .then(response => {
                 this.items = response.data.items;
-                console.log(this.items);
             })
+    }
+}
+
+export default {
+    register(ngModule) {
+        ngModule.service('VideoFeedService', VideoFeedService);
     }
 }

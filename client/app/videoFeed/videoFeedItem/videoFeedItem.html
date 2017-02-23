@@ -1,12 +1,5 @@
 <div class="video-feed-item">
   <h2>{{ $ctrl.getTitle() }}</h2>
-  <div>{{ $ctrl.getViews() }} views</div>
-  <div class="video-feed-item__video" ng-switch="$ctrl.getVideoSource()">
-    <youtube-video ng-switch-when="youtube" video-id="$ctrl.getVideoId()"></youtube-video>
-    <div ng-switch-when="facebook" class="fb-video"
-      data-href="{{ $ctrl.getVideoUrl() }}"
-      data-width="500"
-      data-allowfullscreen="true"></div>
-    <html5-video ng-switch-when="url" src="$ctrl.getVideoUrl()"></html5-video>
-  </div>
+  <div>{{ $ctrl.views }} views</div>
+  <video-player video="$ctrl.video"></video-player>
 </div>

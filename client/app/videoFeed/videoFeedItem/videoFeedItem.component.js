@@ -1,14 +1,27 @@
 import template from './videoFeedItem.html';
-import controller from './videoFeedItem.controller';
 import './videoFeedItem.scss';
 
-let videoFeedItemComponent = {
+export class VideoFeedItemController {
+  getTitle() {
+    if (this.video.title) {
+      return this.video.title;
+    } else {
+      return 'untitled'
+    }
+  }
+}
+
+export const videoFeedItemComponent = {
   restrict: 'E',
   bindings: {
     video: '<'
   },
   template,
-  controller
+  controller: VideoFeedItemController
 };
 
-export default videoFeedItemComponent;
+export default {
+  register(ngModule) {
+    ngModule.component('videoFeedItem', videoFeedItemComponent);
+  }
+};

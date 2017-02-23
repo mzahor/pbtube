@@ -2,12 +2,10 @@ import angular from 'angular';
 import angularYoutubeEmbed from 'angular-youtube-embed';
 import videoFeedItemComponent from './videoFeedItem.component';
 
-let videoFeedItemModule = angular.module('videoFeedItem', [
+const videoFeedItemModule = angular.module('videoFeedItem', [
   angularYoutubeEmbed
-])
+]);
 
-.component('videoFeedItem', videoFeedItemComponent)
+videoFeedItemComponent.register(videoFeedItemModule);
 
-.name;
-
-export default videoFeedItemModule;
+export default videoFeedItemModule.name;

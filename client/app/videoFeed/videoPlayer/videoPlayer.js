@@ -1,13 +1,14 @@
 import angular from 'angular';
 import angularYoutubeEmbed from 'angular-youtube-embed';
+
 import videoDirective from './video.directive';
+import videoPlayerComponent from './videoPlayer.component';
 
-let videoPlayerModule = angular.module('videoPlayer', [
+const videoPlayerModule = angular.module('videoPlayer', [
   angularYoutubeEmbed
-])
+]);
 
-.directive('html5Video', videoDirective)
+videoPlayerComponent.register(videoPlayerModule);
+videoDirective.register(videoPlayerModule);
 
-.name;
-
-export default videoPlayerModule;
+export default videoPlayerModule.name;

@@ -5,12 +5,11 @@ import videoPlayer from './videoPlayer/videoPlayer';
 import videoFeedComponent from './videoFeed.component';
 import videoFeedService from './videoFeed.service';
 
-let videoFeedModule = angular.module('videoFeed', [
+const videoFeedModule = angular.module('videoFeed', [
   uiRouter,
   videoFeedItem,
   videoPlayer
 ])
-
 .config(($stateProvider) => {
   "ngInject";
   $stateProvider
@@ -18,11 +17,9 @@ let videoFeedModule = angular.module('videoFeed', [
       url: '/',
       component: 'videoFeed'
     });
-})
+});
   
-.component('videoFeed', videoFeedComponent)
-.service('videoFeedService', videoFeedService)
+videoFeedComponent.register(videoFeedModule);
+videoFeedService.register(videoFeedModule);
 
-.name;
-
-export default videoFeedModule;
+export default videoFeedModule.name;

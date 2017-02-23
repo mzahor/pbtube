@@ -1,12 +1,31 @@
 import template from './videoFeed.html';
-import controller from './videoFeed.controller';
 import './videoFeed.scss';
 
-let videoFeedComponent = {
+export class VideoFeedController {
+  constructor(VideoFeedService) {
+    'ngInject';
+
+    this.name = 'Video Feed';
+    this.VideoFeedService = VideoFeedService;
+    this.init();
+  }
+
+  init() {
+    this.VideoFeedService.loadFeed().then(() => {
+      this.items = this.VideoFeedService.items;
+    });
+  }
+}
+
+export const videoFeedComponent = {
   restrict: 'E',
   bindings: {},
   template,
-  controller
+  controller: VideoFeedController
 };
 
-export default videoFeedComponent;
+export default {
+  register(ngModule) {
+    ngModule.component('videoFeed', videoFeedComponent);
+  }
+};
