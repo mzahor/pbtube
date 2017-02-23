@@ -1,3 +1,5 @@
 <div>
-  <h1>{{ $ctrl.name }}</h1>
+  <h2>{{ $ctrl.getTitle() }}</h2>
+  <div>{{ $ctrl.getViews() }} views</div>
+  <youtube-video video-id="$ctrl.getVideoId()"></youtube-video>
 </div>

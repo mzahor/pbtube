@@ -8,6 +8,7 @@ export default class VideoFeedService {
         return this.$http.get('https://cdn.playbuzz.com/content/feed/items')
             .then(response => {
                 this.items = response.data.items;
+                console.log(this.items);
             })
     }
 }

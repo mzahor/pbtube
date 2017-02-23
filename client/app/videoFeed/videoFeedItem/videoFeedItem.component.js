@@ -4,7 +4,9 @@ import './videoFeedItem.scss';
 
 let videoFeedItemComponent = {
   restrict: 'E',
-  bindings: {},
+  bindings: {
+    video: '<'
+  },
   template,
   controller
 };

@@ -1,9 +1,9 @@
 import angular from 'angular';
-import uiRouter from 'angular-ui-router';
+import angularYoutubeEmbed from 'angular-youtube-embed';
 import videoFeedItemComponent from './videoFeedItem.component';
 
 let videoFeedItemModule = angular.module('videoFeedItem', [
-  uiRouter
+  angularYoutubeEmbed
 ])
 
 .component('videoFeedItem', videoFeedItemComponent)
