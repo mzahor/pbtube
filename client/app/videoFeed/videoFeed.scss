@@ -1,2 +1,14 @@
-.videoFeed {
+@import '../common/common.scss';
+
+.video-feed {
+    h1 {
+        color: $text-color;
+        background-color: $brand-color;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 18px;
+        padding: 20px;
+        border-bottom: darken($brand-color, 10%) 2px solid;
+    }
 }
