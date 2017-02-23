@@ -1,2 +1,14 @@
+@import '../../common/common.scss';
+
 .video-feed-item {
+    border: darken($brand-color, 5%) 2px solid;
+    width: 640px;
+
+    .video-title {
+
+    }
+
+    .video-views {
+
+    }
 }

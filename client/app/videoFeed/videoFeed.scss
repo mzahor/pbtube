@@ -1,14 +1,21 @@
 @import '../common/common.scss';
 
 .video-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     h1 {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+        margin-bottom: 10px;
         color: $text-color;
         background-color: $brand-color;
         text-align: center;
         text-transform: uppercase;
         font-weight: normal;
         font-size: 18px;
-        padding: 20px;
         border-bottom: darken($brand-color, 10%) 2px solid;
     }
 }

@@ -1,4 +1,5 @@
 import template from './videoPlayer.html';
+import style from './videoPlayer.scss';
 
 export class VideoPlayerController {
   getFacebookUrl() {
