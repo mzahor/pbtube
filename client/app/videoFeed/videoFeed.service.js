@@ -1,5 +1,13 @@
 export default class VideoFeedService {
-    constructor() {
-        console.log('loaded')
+    constructor($http) {
+        "ngInject";
+        this.$http = $http;
+    }
+
+    loadFeed() {
+        return this.$http.get('https://cdn.playbuzz.com/content/feed/items')
+            .then(response => {
+                this.items = response.data.items;
+            })
     }
 }
