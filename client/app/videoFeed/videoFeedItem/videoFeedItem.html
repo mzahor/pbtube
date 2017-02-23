@@ -1,5 +1,11 @@
-<div>
+<div class="video-feed-item">
   <h2>{{ $ctrl.getTitle() }}</h2>
   <div>{{ $ctrl.getViews() }} views</div>
-  <youtube-video video-id="$ctrl.getVideoId()"></youtube-video>
+  <div class="video-feed-item__video" ng-switch="$ctrl.getVideoSource()">
+    <youtube-video ng-switch-when="youtube" video-id="$ctrl.getVideoId()"></youtube-video>
+    <div ng-switch-when="facebook" class="fb-video"
+      data-href="{{ $ctrl.getVideoUrl() }}"
+      data-width="500"
+      data-allowfullscreen="true"></div>
+  </div>
 </div>
