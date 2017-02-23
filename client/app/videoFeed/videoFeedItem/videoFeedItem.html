@@ -1,5 +1,7 @@
 <div class="video-feed-item">
-  <h2 class="video-title">{{ $ctrl.getTitle() }}</h2>
-  <div class="video-views">{{ $ctrl.video.views }} views</div>
+  <div class="video-feed-item__header">
+    <h2 class="video-title">{{ $ctrl.getTitle() }}</h2>
+    <div class="video-views">{{ $ctrl.video.views }} views</div>
+  </div>
   <video-player video="$ctrl.video"></video-player>
 </div>

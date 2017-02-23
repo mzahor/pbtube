@@ -1,14 +1,28 @@
 @import '../../common/common.scss';
 
+@mixin text-style {
+    font-size: 14px;
+    font-weight: normal;
+    color: darken($brand-color, 60%);
+}
+
 .video-feed-item {
-    border: darken($brand-color, 5%) 2px solid;
     width: 640px;
+    margin-bottom: 30px;
+    border: darken($brand-color, 5%) 2px solid;
+
+    .video-feed-item__header {
+        display: flex;
+        align-items: center;
+        padding: 15px 10px;
+    }
 
     .video-title {
-
+        flex-grow: 1;
+        @include text-style;
     }
 
     .video-views {
-
+        @include text-style;
     }
 }
