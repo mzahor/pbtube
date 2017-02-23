@@ -24,6 +24,10 @@ class VideoFeedItemController {
   }
 
   getVideoUrl() {
+    if (this.video.source === 'url') {
+      return this.video.url;
+    }
+
     return 'https://www.facebook.com/facebook/videos/' + this.video.videoId;
   }
 }

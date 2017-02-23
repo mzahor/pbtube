@@ -7,5 +7,6 @@
       data-href="{{ $ctrl.getVideoUrl() }}"
       data-width="500"
       data-allowfullscreen="true"></div>
+    <html5-video ng-switch-when="url" src="$ctrl.getVideoUrl()"></html5-video>
   </div>
 </div>
