@@ -1,11 +1,13 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import common from './common/common';
 import videoFeed from './videoFeed/videoFeed';
 import appComponent from './app.component';
 import 'normalize.css';
 
 const appModule = angular.module('app', [
   uiRouter,
+  common,
   videoFeed
 ])
 .config(($locationProvider) => {
