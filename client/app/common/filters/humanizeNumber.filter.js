@@ -1,6 +1,8 @@
 function humanizeNumberFilter() {
     return function(input) {
-        return output;
+        if (input < 1000) {
+          return String(input);
+        }
     }
 }
 

@@ -8,7 +8,7 @@ describe('humanizeNumber filter', function() {
     humanizeNumber = $filter('humanizeNumber');
   }));
 
-  it('should leave numbers less than 100 as they are', function() {
+  it('should leave numbers less than 1000 as they are', function() {
     const i = 1;
     const humanized = humanizeNumber(1);
     expect(humanized).to.equal('1');
